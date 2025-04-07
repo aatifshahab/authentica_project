@@ -1,0 +1,16 @@
+pandas
+scikit-learn
+matplotlib
+seaborn
+joblib
+geopandas
+contextily
+shapely
+pyproj
+fastapi
+uvicorn
+folium
+streamlit
+streamlit-folium
+numpy
+jupyter
