@@ -83,3 +83,13 @@ joblib.dump(kmeans, "scripts/models/kmeans.pkl")
 df_model.to_csv("data/training_data_with_clusters.csv", index=False)
 
 print("Models saved successfully in 'scripts/models/'")
+
+# Save scaled ICP columns + region_label
+df_model_scaled = df_model.copy()
+for i, col in enumerate(selected_icp40):
+    df_model_scaled[col] = X_scaled[:, i]
+df_model_scaled.to_csv("data/training_data_scaled.csv", index=False)
+print("Saved scaled ICP data with cluster labels to 'data/training_data_scaled.csv'")
+
+# Save original unscaled data + region_label (optional)
+df_model.to_csv("data/training_data_with_clusters.csv", index=False)
